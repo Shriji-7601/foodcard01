@@ -1,94 +1,157 @@
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 90vh;
-    background: #090707;
-    box-shadow: rgb(255, 9, 9);
+    background:linear-gradient(to bottom, rgb(85, 199, 244),rgba(229, 229, 234, 0)) ;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(https://previews.123rf.com/images/crystaleyemedia/crystaleyemedia1601/crystaleyemedia160100041/51751473-baking-and-cooking-wallpaper-line-art-style-with-blank-space-and-framed-corners-editable-clip-art.jpg?fj=1);
 }
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: aquamarine;
-    padding: 10px 20px;
-}
-.logo{
-    color: #f8f8f8;
-    font-size: 4px;
-    font-weight: bold;
+    background-color: #f0f0ff;
+    padding: -10px 40px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 }
-blre.nav-links{
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo-container img{
+    width: 160px;
+    height: auto;
+}
+.logo {
+    color: #4b0082; /* Deep purple color */
+    font-weight: bold;
+    font-size: 90px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adding a subtle shadow */
+    transition: transform 0.3s ease; /* Example of transition for interaction */
+}
+.logo-text{
+    font-size: 70px;
+    font-style:italic;
+    font-weight: bold;
+    color: #4b0082; /* Deep purple color */
+    text-shadow: 5px 6px 4px rgba(0, 0, 0, 0.3); /* Adding a subtle shadow */
+    transition: transform 0.3s ease; /* Example of transition for interaction */
+}
+.logo-text:hover{
+    transform: scale(1.05);
+}
+.nav-links {
     list-style: none;
-    padding: auto;
+    padding: 0;
     margin: 0;
     display: flex;
 }
-.nav-links li{
-    margin: 0 15px ;
+
+.nav-links li {
+    margin: 0 15px;
 }
-.nav-links a{
-    color: aliceblue;
+
+.nav-links a {
+    color: #4b0082;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 37px;
     transition: color 0.3s;
 }
-.nav-links a:hover{
-    color: rgb(10, 232, 206);
+
+.nav-links a:hover {
+    color: #8a2be2;
+}
+
+.main-content {
+    text-align: center;
+    margin: 40px 0;
+    width: 100%;
+}
+
+.main-content h1 {
+    color: #000000;
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-shadow:3px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:20px
 }
 
 .card {
-    background: #f8f8f8;
-    height: 380px;
-    width: 340px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.card.image>img{
-    max-width: 100%;
-    border-radius: 10px;
+.card .image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+
 }
 
-.card.info {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 0px 30px 0px 30px;
+.card .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 200px;
 }
-.card.info.h3{
-    font-size: 30px;
+
+.card .info {
+    text-align: center;
+}
+
+.card .info .title h3 {
+    font-size: 24px;
     font-weight: 700;
     margin-bottom: 5px;
 }
-.card.info.p{
+
+.card .info .title p {
     font-size: 18px;
     font-weight: 600;
 }
-.card.price{
-    text-align: right;
+
+.card .price {
     color: darkred;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0;
 }
-.card.btn{
+
+.card .btn {
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
-.card.btn.button{
-    padding: 12px 32px;
+
+.card .btn button {
+    padding: 10px 20px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     background: orchid;
-    color: #f8f8f8;
+    color: #ffffff;
     font-size: 15px;
     font-weight: 700;
     cursor: pointer;
+    margin: 0 5px;
 }
-.card.btn.btn2{
+
+.card .btn .btn2 {
     background: black;
-    padding: 12px 15px;
 }
-
-
-
-
-
-
