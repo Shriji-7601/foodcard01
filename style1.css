@@ -1,157 +1,80 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background:linear-gradient(to bottom, rgb(85, 199, 244),rgba(229, 229, 234, 0)) ;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url(https://previews.123rf.com/images/crystaleyemedia/crystaleyemedia1601/crystaleyemedia160100041/51751473-baking-and-cooking-wallpaper-line-art-style-with-blank-space-and-framed-corners-editable-clip-art.jpg?fj=1);
+h1{
+    text-align: center;
+    color: rgb(211, 37, 7);
+    padding: 20px;
+    font-style:normal
 }
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f0f0ff;
-    padding: -10px 40px;
-    width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
+nav{
+    background-color: rgb(218, 123, 55);
+    display: grid;
+    place-items: center;
 }
-.logo-container {
-    display: flex;
-    align-items: center;
+nav ul{
+    list-style-type: none;
 }
-.logo-container img{
-    width: 160px;
-    height: auto;
-}
-.logo {
-    color: #4b0082; /* Deep purple color */
-    font-weight: bold;
-    font-size: 90px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adding a subtle shadow */
-    transition: transform 0.3s ease; /* Example of transition for interaction */
-}
-.logo-text{
-    font-size: 70px;
-    font-style:italic;
-    font-weight: bold;
-    color: #4b0082; /* Deep purple color */
-    text-shadow: 5px 6px 4px rgba(0, 0, 0, 0.3); /* Adding a subtle shadow */
-    transition: transform 0.3s ease; /* Example of transition for interaction */
-}
-.logo-text:hover{
-    transform: scale(1.05);
-}
-.nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    color: #4b0082;
+nav ul a{
+    display: inline-block;
+    padding: 20px;
     text-decoration: none;
-    font-size: 37px;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #8a2be2;
-}
-
-.main-content {
-    text-align: center;
-    margin: 40px 0;
-    width: 100%;
-}
-
-.main-content h1 {
-    color: #000000;
-    font-size: 36px;
-    margin-bottom: 40px;
-    text-shadow:3px 4px 4px rgba(0, 0, 0, 0.2);
-}
-
-.cards-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap:20px
-}
-
-.card {
-    background: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.card .image{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 10px 10px 0 0;
-
-}
-
-.card .image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    max-height: 200px;
-}
-
-.card .info {
-    text-align: center;
-}
-
-.card .info .title h3 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.card .info .title p {
+    color: #000;
+    transition: 0.2s ease-in;
     font-size: 18px;
-    font-weight: 600;
 }
-
-.card .price {
-    color: darkred;
-    font-size: 20px;
-    font-weight: 700;
-    margin: 10px 0;
+nav ul a:hover{
+    background-color: green;
+    color: wheat;
 }
-
-.card .btn {
-    display: flex;
-    justify-content: space-around;
+.items{
+    display: grid;
+    background-image: url(background\ image.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat ;
+    grid-template-columns: repeat(3,1fr);
+    padding:30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    font-family: "Playwrite US Trad", cursive; 
+    font-size: 11px;
+}
+.item img{
     width: 100%;
-}
 
-.card .btn button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background: orchid;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 700;
+    height: 300px;
+    object-fit: cover;
     cursor: pointer;
-    margin: 0 5px;
+    transition: 0.2s ease;
 }
-
-.card .btn .btn2 {
-    background: black;
+.item img:hover{
+    transform: scale(1.04);
+}
+.item h4{
+    padding: 5px;
+    text-align: center;
+}
+.item button{
+    padding: 5px 30px;
+    border:none;
+    outline: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 20px;
+    display: black;
+    margin: auto;
+    transition: 0.2s all;
+}
+.item buttton:hover{
+    transform: scale(1.08);
+}
+@media screen and (max-width:1000px) {
+    .itmes{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width:786px) {
+    .itmes{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
