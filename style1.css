@@ -76,5 +76,5 @@ nav ul a:hover{
 @media screen and (max-width:786px) {
     .itmes{
         grid-template-columns: repeat(1,1fr);
-    }
+    }
 }
